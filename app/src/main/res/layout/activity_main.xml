@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="cn.foxnickel.xunfeivoice.MainActivity">
+
+    <EditText
+        android:id="@+id/text_evaluate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入要评测的句子:"/>
+
+        <EditText
+            android:id="@+id/parse_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_evaluate"
+            android:text="结果将会显示在这里"
+            android:maxLines="10"
+            android:editable="false"
+            />
+
+    <Button
+        android:id="@+id/chinese_evaluate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="评测中文"
+        android:layout_below="@id/parse_result"/>
+
+    <Button
+        android:id="@+id/begin_evaluate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chinese_evaluate"
+        android:text="开始评测"/>
+
+    <Button
+        android:id="@+id/stop_evaluate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/begin_evaluate"
+        android:text="结束评测"/>
+
+    <Button
+        android:id="@+id/parse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stop_evaluate"
+        android:text="解析"/>
+
+</RelativeLayout>
